@@ -1,0 +1,19 @@
+<ion-view title="Listado">
+    <ion-content>
+        <ion-list>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="Que deseas buscar" ng-model="Home.query">
+                </label>
+                <button class="button button-small icon ion-search" ng-click="Home.search(Home.query)">
+                </button>
+            </div>
+            <ion-item class="item-thumbnail-left" ng-repeat="item in Home.productos" ui-sref="layout.detail({'id': item.id})">
+            	<img ng-src="{{item.thumbnail}}">
+            	<h2>{{::item.title | limitTo: 25 }}{{item.title.length > 25 ? '...' : ''}}</h2>
+            	<p>Condicion: {{::item.condition}}</p>
+            	<p>Precio: {{::item.price | currency: "$":0}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

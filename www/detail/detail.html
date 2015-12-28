@@ -1,0 +1,20 @@
+<ion-view title="Detalle">
+    <ion-content>
+        <div class="list card">
+            <div class="item item-body">
+                <img class="main-image" ng-src="{{Detail.selectedImage}}">
+                <div class="row" style="flex-wrap: wrap;">
+                    <div ng-repeat="foto in Detail.productDetail.pictures | limitTo: 3" class="col-33">
+                        <img class="full-image" ng-src="{{::foto.url}}" ng-click="Detail.changeImage($index)">
+                    </div>
+                </div>
+                <p><strong>Precio:</strong> {{::Detail.productDetail.price | currency: "$":0}}</p>
+                <p><strong>Finaliza el:</strong> {{Detail.productDetail.stop_time | date}}</p>
+                <p>
+                    <strong>Descripcion:</strong> {{Detail.productDetail.title}}
+                </p>
+                <button class="button button-balanced button-block icon-left ion-android-favorite-outline" ng-click="Detail.addFavorites(Detail.productDetail)">Agregar a favoritos</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

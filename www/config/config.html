@@ -1,0 +1,19 @@
+<ion-view title="Configuracion">
+    <ion-content scroll="false">
+        <ion-list>
+            <ion-item class="item-divider">
+                Limites
+            </ion-item>
+            <div class="item range range-positive">
+                <i class="icon ion-social-usd"></i>
+                <input type="range" min="0" max="100000" value="{{Config.priceLimit}}" ng-model="Config.priceLimit">
+                <p>Limite precio: {{Config.priceLimit | currency: "$" : 0}}</p>
+            </div>
+            <div class="item range range-positive">
+                <i class="icon ion-navicon-round"></i>
+                <input type="range" min="1" max="100" value="{{Config.itemsLimit}}" ng-model="Config.itemsLimit">
+                <p>Limite items: {{Config.itemsLimit}}</p>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+/* Empty. Add your own CSS if you like */
+.row {
+	padding: 0px;
+}
+
+.row img.full-image {
+	padding: 1px;
+	max-height: 80px;
+}
+
+.main-image {
+	padding: 1px;
+	max-height: 300px;
+	width: 100%;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.pink {
+	background-color: pink;
+}
+.yellow {
+	background-color: yellow;
+}
+
+.white {
+	color:white;
+}

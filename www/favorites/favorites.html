@@ -1,0 +1,12 @@
+<ion-view title="Favoritos">
+    <ion-content>
+        <ion-list>
+        	<ion-item ng-if="Favorites.favorites.length === 0">No hay items en favoritos</ion-item>
+            <ion-item ng-repeat="favorito in Favorites.favorites">
+                {{$index + 1}}: {{favorito.title | limitTo: 15}}
+                <ion-option-button class="button-assertive icon ion-trash-b" ng-click="Favorites.delete($index)"></ion-option-button>
+                <ion-option-button class="button-light icon ion-share" ng-click="Favorites.share($index)"></ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src &apos;self&apos; &apos;unsafe-inline&apos;; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ngstorage/ngStorage.js"></script>
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+    <script src="lib/ionic-native-transitions/dist/ionic-native-transitions.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/route.js"></script>
+    <script src="js/services.js"></script>
+
+    <script type="text/javascript" src="home/homeModule.js"></script>
+    <script type="text/javascript" src="home/homeCtrl.js"></script>
+    <script type="text/javascript" src="scan/scanModule.js"></script>
+    <script type="text/javascript" src="scan/scanCtrl.js"></script>
+    <script type="text/javascript" src="config/configModule.js"></script>
+    <script type="text/javascript" src="config/configCtrl.js"></script>
+    <script type="text/javascript" src="detail/detailModule.js"></script>
+    <script type="text/javascript" src="detail/detailCtrl.js"></script>
+    <script type="text/javascript" src="favorites/favoritesModule.js"></script>
+    <script type="text/javascript" src="favorites/favoritesCtrl.js"></script>
+     <script type="text/javascript" src="explanation/explanationModule.js"></script>
+    <script type="text/javascript" src="explanation/explanationCtrl.js"></script>
+  </head>
+  <body ng-app="mercadoApp">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
